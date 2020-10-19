@@ -1,0 +1,17 @@
+SELECT microstation_id,
+       ROUND(longitude::numeric,3) AS long,
+       ROUND(latitude::numeric,3) AS lat, 
+       ROUND(avg("pressure")::numeric,2) as pressure,
+       ROUND(avg("temperature")::numeric,2) as temperature,
+       ROUND(avg("humidity")::numeric,2) as humidity, 
+       ROUND(avg("CO")::numeric,2) as "CO", 
+       ROUND(avg("NH3")::numeric,2) as "NH3", 
+       ROUND(avg("NO2")::numeric,2) as "NO2", 
+       ROUND(avg("CH4")::numeric,2) as "CH4", 
+       ROUND(avg("H2")::numeric,2) as "H2", 
+       ROUND(avg("C3H8")::numeric,2) as "C3H8", 
+       ROUND(avg("C4H10")::numeric,2) as "C4H10", 
+       ROUND(avg("C2H5OH")::numeric,2) as "C2H5OH", 
+       ROUND(avg("Dust")::numeric,2) as "Dust"
+FROM air_quality
+GROUP BY microstation_id, long, lat

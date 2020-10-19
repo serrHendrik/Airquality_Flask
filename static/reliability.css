@@ -1,0 +1,151 @@
+.catch_phrase {
+
+	text-align: center;
+	margin-top: -30px;
+	margin-bottom: -30px;
+	padding-top:15vh;
+	line-height: 40px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 900;
+	font-style: italic;
+	font-size: 24pt;
+	color: white;
+
+
+	pointer-events: none;
+}
+
+.under_figure {
+	padding-top: 15px;
+	text-align: center;
+	font-size: 15px;
+	font-style: italic;
+}
+
+/*brown subtitles*/
+
+.subtitle {
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	font-size: 48pt;
+	padding-top:20px;
+	padding-bottom: 20px;
+	margin: 10px 0px;
+}
+
+.second_title p {
+	font-family: 'Roboto', sans-serif;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.bg_bruin{
+	background-color: #d2c6ac;
+}
+
+.bg_blank{
+	background-color: rgb(0,0,0,0); /* color: black, but opacity=0*/
+}
+
+/*scrolling idfferent background: from https://codyhouse.co/gem/alternate-fixed-scroll-backgrounds/*/
+
+.cd-fixed-bg {  
+  min-height: 50vh;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.cd-fixed-bg.cd-fixed-bg--1 {
+  background-image: url("./media/landing_reliability_bw.png");
+}
+
+.cd-fixed-bg.cd-fixed-bg--2 {
+  min-height: 45vh;
+  margin-top: -16px;
+  margin-bottom: -30px;
+  background-image: url("./media/temperature.png");
+}
+
+.cd-fixed-bg.cd-fixed-bg--3 {
+  min-height: 20vh;
+  margin-top: -16px;
+  margin-bottom: -30px;
+  background-image: url("./media/temperature.png");
+}
+
+.cd-fixed-bg.cd-fixed-bg--4 {
+  min-height: 20vh;
+  margin-top: -16px;
+  margin-bottom: -30px;
+  background-image: url("./media/barometer.png");
+}
+
+.cd-fixed-bg.cd-fixed-bg--5 {
+  min-height: 30vh;
+  margin-top: -16px;
+  margin-bottom: -30px;
+  background-image: url("./media/barometer.png");
+}
+
+/*section with color background*/
+.cd-scrolling-bg {
+  min-height: 100%;
+}
+
+.cd-scrolling-bg.cd-scrolling-bg--color-1{
+	background-color:#d2c6ac;
+	padding-bottom: 5vh;
+	position: relative;
+	z-index: 10;
+    box-shadow: 0px 5px 20px #464646;
+}
+
+.cd-scrolling-bg.cd-scrolling-bg--color-2{
+	background-color:#B6C2A0;
+	padding-bottom: 5vh;
+	position: relative;
+	z-index: 10;
+    box-shadow: 0px 5px 20px #464646;
+}
+
+.cd-scrolling-bg.cd-scrolling-bg--color-3{
+	background-color:#D1BAAC;
+	position: relative;
+	z-index: 10;
+    box-shadow: 0px -7px 10px #464646;
+    padding-bottom: 5vh;
+}
+
+.cd-scrolling-bg.cd-scrolling-bg--color-4{
+	background-color:#F9ECE0;
+	position: relative;
+	z-index: 9;
+    box-shadow: 0px -7px 10px #464646;
+    padding-bottom: 5vh;
+}
+
+.cd-scrolling-bg.cd-scrolling-bg--color-5{
+	background-color:#6F8781;
+	position: relative;
+	z-index: 8;
+    box-shadow: 0px -5px 10px #464646;
+    padding-bottom: 7vh;
+}
+
+.border_red{
+	border-color: red;
+	border-style: solid;
+    border-width: 2px 2px 2px 2px;
+}
+
+.border_green{
+	border-color: green;
+	 border-style: solid;
+    border-width: 2px 2px 2px 2px;
+}

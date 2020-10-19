@@ -1,0 +1,86 @@
+{% extends "navigation.html" %}
+
+
+{% block head %}
+
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='landing.css') }}">
+
+{% endblock %}
+
+
+{% block content %}
+
+	<div class="section_1">
+		<p class="catch_phrase noselect">A Microcontroller Community<br />Looking Into The Quality Of Our Air.<br /><br />Wanna Help?</p>
+	</div>
+
+	<div class="container-fluid section_2">
+		<div class="row no-gutters">
+			<div class="col">
+				<h1>Project Silk-Air</h1>
+			</div>
+		</div>
+		<div class="row no-gutters justify-content-center">
+			<div class="col-4">
+				<p class="introduction_text">
+					Since the dawn of the industrial age, we humans have tirelessly been increasing our impact on the environment. While deforestation and plastic waste in our oceans are side effects which can easily be observed, the pollution of our air is a different matter. As the criticallity of the situation became clear to the public by the effects of SMOG, governments have increased their interest and worldwide efforts to maintain control over air pollution are accelerating. 
+				</p>
+			</div>
+			<div class="col-1"></div>
+			<div class="col-4">
+				<p class="introduction_text">
+					Modern infrastructures to gather data on fine dust and gasses face certain challenges. Most importantly, the equipment is expensive and stations remain at a fixed location. Measurements therefore are not always representative for the air which we breathe daily. Project Silk-Air explores a solution to this problem by turning air polution data gathering into a citizen science. To this end, we call upon the microcontroller community to step forth and lead the world into a better understanding of the quality of our air.
+				</p>
+			</div>
+		</div>
+
+
+	</div>
+
+	<div class="container section_3">
+		<div class="row no-gutters justify-content-start s3_row_h">
+			<div class="col-5 s3_col" id="col_heatmap">
+				<!-- Background is an image -->
+			</div>
+			<div class="col-6 d-flex flex-column justify-content-center s3_col">
+				<h5>Heatmap</h5>
+				<p>
+					Our Heatmap is designed to query our database with ease and comfort.
+					Have a look, play around and see if your neighbour is burning coal.
+				</p>
+			</div>
+		</div>
+		<div class="row no-gutters justify-content-end s3_row_r">
+			<div class="col-6 d-flex flex-column justify-content-center s3_col">
+				<h5>Reliability</h5>
+				<p>
+					Does hardware provided for microcontrollers actually have any scientific value? On this page, we try to reach some kind of conclusion about the polution... in our data.
+
+				</p>
+			</div>
+			<div class="col-5 s3_col" id="col_reliability">
+				<!-- Background is an image -->
+			</div>
+		</div>
+		<div class="row no-gutters justify-content-start s3_row_p">
+			<div class="col-5 s3_col" id="col_participate">
+				<!-- Background is an image -->
+			</div>
+			<div class="col-6 d-flex flex-column justify-content-center s3_col">
+				<h5>Participate</h5>
+				<p>
+					Silkair is a full on community-based project. To make all of it work, we need help from you and all your science-loving friends to go into the world and generate the data! Be quick and click here and we'll show you how to configure your own microstation.
+				</p>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+	<script type="text/javascript" src="/static/landing.js"></script>
+
+{% endblock %}

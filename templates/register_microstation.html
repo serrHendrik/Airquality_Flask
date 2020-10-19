@@ -1,0 +1,78 @@
+{% extends "navigation.html" %}
+
+
+{% block head %}
+
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='register_microstation.css') }}">
+
+{% endblock %}
+
+
+{% block content %}
+	<div class="register_background">
+		<!-- Render fixed background -->
+	</div>
+
+	<div class="container-fluid">
+		<div class="row">
+			{% with messages = get_flashed_messages() %}
+			  {% if messages %}
+			    <ul class=flashes_register>
+			    {% for message in messages %}
+			      <li>{{ message }}</li>
+			    {% endfor %}
+			    </ul>
+			  {% endif %}
+			{% endwith %}
+		</div>
+
+		<div class="row no-gutters justify-content-center register_row">
+			<div class="col-6 align-self-center container-fluid register_box">
+				
+				{% from "_formhelpers.html" import render_field %}
+				<form method="post">
+
+					<div class="row no-gutters justify-content-center registerform_head">
+						<h1>Register Your Microstation</h1>		
+					</div>
+					<div class="row no-gutters justify-content-center">
+						<div class="col-10 registerform_subhead">
+							<p>1. Identify your station.</p>
+						</div>
+					</div>
+					<div class="row justify-content-center ">
+						<div class="col-10 registerform_content">
+							<dl>
+								{{ render_field(form.microstation_id) }}
+								{{ render_field(form.microstation_name) }}
+							</dl>
+						</div>
+					</div>
+					<div class="row no-gutters justify-content-center">
+						<div class="col-10 registerform_subhead">
+							<p>2. Which sensors do you use?</p>
+						</div>
+					</div>
+					<div class="row justify-content-center">
+						<div class="col-10 registerform_content">
+							<dl>
+								{{ render_field(form.sensor_gps) }}
+								{{ render_field(form.sensor_dust) }}
+								{{ render_field(form.sensor_gas) }}
+								{{ render_field(form.sensor_barometer) }}
+							</dl>
+						</div>
+					</div>
+					<div class="row no-gutters justify-content-center registerform_submit">
+						<input type="submit" name="register_microstation" value="Register" >		
+					</div>
+						
+				</form>
+
+			</div>
+		</div>
+
+
+	</div>
+{% endblock %}

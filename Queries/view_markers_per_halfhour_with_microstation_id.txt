@@ -1,0 +1,18 @@
+SELECT microstation_id,
+       (ROUND(longitude * 100) / 100) AS markerlong,
+       (ROUND(latitude * 100) / 100) AS markerlat, 
+	   date_trunc('day',timestamp) + (ROUND(EXTRACT(epoch FROM (timestamp - date_trunc('day',timestamp))) / 1800) * 1800) * interval '1 second' AS timestamp_halfhour, 
+       round(avg("pressure")::numeric,2) as pressure,
+       round(avg("temperature")::numeric,2) as temperature,
+       round(avg("humidity")::numeric,2) as humidity, 
+       round(avg("CO")::numeric,2) as "CO", 
+       round(avg("NH3")::numeric,2) as "NH3", 
+       round(avg("NO2")::numeric,2) as "NO2", 
+       round(avg("CH4")::numeric,2) as "CH4", 
+       round(avg("H2")::numeric,2) as "H2", 
+       round(avg("C3H8")::numeric,2) as "C3H8", 
+       round(avg("C4H10")::numeric,2) as "C4H10", 
+       round(avg("C2H5OH")::numeric,2) as "C2H5OH", 
+       round(avg("Dust")::numeric,2) as "Dust"
+FROM air_quality
+GROUP BY microstation_id, markerlong, markerlat, timestamp_halfhour

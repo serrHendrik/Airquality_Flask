@@ -1,0 +1,83 @@
+{% extends "navigation.html" %}
+
+{% block head %}
+
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='heatmap.css') }}">
+
+{% endblock %}
+
+
+
+{% block content %}
+      <div id="map_control" class="row align-items-start">
+
+          <div id="dataOptions" class="col">
+
+              <select id="aq_parameter_select" class="form-control form-control-lg">
+
+                <option value="temperature" selected="selected">Temperature</option>
+                <option value="humidity">Humidity</option>
+                <option value="CO">CO</option>
+                <option value="NH3">NH3</option>
+                <option value="NO2">NO2</option>
+                <option value="CH4">CH4</option>
+                <option value="H2">H2</option>
+                <option value="C3H8">C3H8</option>
+                <option value="C4H10">C4H10</option>
+                <option value="C2H5OH">C2H5OH</option>
+                <option value="Dust">Dust</option>
+
+              </select>
+
+          </div>
+
+          <div id="stationOptions" class="col">
+
+              <select id="station_select" class="form-control form-control-lg">
+                <option value="all" selected="selected">All</option>
+              </select>
+
+          </div>
+      </div>
+
+      <div id="backButton">
+        <button type="button" class="btn btn-secondary">BACK</button>
+      </div>
+
+      <div id="gradientCard" class="card text-center" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title" id="gradientTitle"></h5>
+          <div class="row justify-content-md-center">
+            <div id="gradient" class="col-md-7">
+              <!--DYNAMIC FILL WITH ROWS-->
+            </div>
+          </div>
+          <p id="unit"></p>
+        </div>
+      </div>
+
+      <div id="map"></div>
+
+{% endblock %}
+
+
+
+{% block scripts %}
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+    <script type="text/javascript" src="/static/_map_global_variables.js"></script>
+    <script type="text/javascript" src="/static/_map_styling.js"></script>
+    <script type="text/javascript" src="/static/heatmap.js"></script>
+    <script type="text/javascript" src="/static/media/gradients.json"></script>
+
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6I_v3oOA4aV15yZrwe-_ECKq88msnU0E&libraries=visualization&callback=initMap"></script>
+
+
+{% endblock %}

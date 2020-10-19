@@ -1,0 +1,122 @@
+{% extends "navigation.html" %}
+
+{% block head %}
+
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='reliability.css') }}">
+
+{% endblock %}
+
+{% block content %}
+		<div class="cd-fixed-bg cd-fixed-bg--1 catch_phrase">
+	      <h1>Gathering loads of data on air quality is fun,</br> but how reliable are these data really? </br>Which sensors are faulty and should be avoided?  </br> Let's find out together!</h1>
+	   </div> 
+
+	   <div class="cd-scrolling-bg cd-scrolling-bg--color-1">
+	   	  <h2 class="subtitle"> How do we measure air quality?</h2>
+	      <div class="col-11" style="margin-left: 5%; font-size:17px;">
+				<p>
+				The <strong>Air Quality Index</strong>, also known as AQI is a number indicating how polluted the air is. The higher the index the higher the level of pollution. The AQI is especially based on the levels of PM<sub>2.5</sub>, PM<sub>10</sub>, O<sub>3</sub> (ozone), NO<sub>2</sub> (nitrogen dioxide).
+				</br>
+				</br>
+				PM, also known as particulate matter, are microscopic particles found in the atmosphere. <strong>PM<sub>2.5</sub></strong> and <strong>PM<sub>10</sub></strong> represent the concentration of particles with a diameter up to 2.5 μm and diameter up to 10 μm respectively. Dust particles small enough to be inhaled may cause irritation of the eyes, coughing, sneezing and asthma attacks. <a href ="http://www.healthywa.wa.gov.au/Articles/F_I/Health-effects-of-dust" style="color: #212529; text-decoration: none;" >Breathing in high concentrations of dust over many years is thought to contribute to disorders like chronic bronchitis and heart and lung disorders.</a>
+				</br>
+				</br>
+				Next, we have <strong>ozone</strong>, found in low concentrations in the stratosphere. This gas protects the Earth's surface from ultraviolet light. Although this gas is fairly important in the air quality calculation, our current microstations are not able to measure it's concentration. 
+				</br>
+				</br>
+				Finally, there's <strong>nitrogen dioxide</strong>, a key contributor to the well-known air pollutant SMOG. Inhaling nitrogen dioxide may cause airway inflammation, reduced immune response, and certain effects on the heart. 
+				</p>
+	      </div> 
+	   </div> 
+
+	   <div class="cd-fixed-bg cd-fixed-bg--2 catch_phrase"style="padding-top:17vh;">
+	      <h1>How reliable are the Grove sensors?</h1>
+	   </div> 
+
+	   <div class="cd-scrolling-bg cd-scrolling-bg--color-2">
+	     <h2 class="subtitle" style="text-align:left; padding-left:5vh;"> Dust Sensor</h2>
+			<div class="row" style="padding-left:5vh;"> 
+			  <div class="col-6">
+				<p>
+				Before we take a look at the measurements by the <strong>Grove Dust sensor</strong>, we must first take the following fact into consideration: the sensor only measures particles with a diameter greater than 1 μm. Therefore, we can't make a distinction between PM<sub>2.5</sub> and PM<sub>10</sub>. In order to be able to compare other data with ours, we convert our data to PM<sub>2.5</sub>  values using the following rules: 1μg/m3 = 155.5pcs/liter. While the average concentration of dust particles in Flanders amount to 16μg/m3 (2500pcs/L) with a minimum of 8μg/m3 (1244pcs/L) and a maximum at 25μg/m3 (3888pcs/L), the Grove Dust Sensor seems to measure only values between  300pcs/L and 1300 pcs/L. So most of the time, this sensor's data isn't a reliable source of absolute values. However, it can still be used to discover certain <strong>trends</strong>.
+	         	</p>
+		      </div> 
+		      <div class="col-5" style="padding-top: 1vh; padding-left:5vh;">
+					<img src="../static/media/dustMetingen.png" class="image">
+					<div class = "under_figure"> Data [pcs/L] captured by Grove Dust Sensor from April 13th till April 15th 2018 at Lochristi, Belgium</div>
+		      </div>
+		  </div>
+	   </div> 
+
+	   <div class="cd-fixed-bg cd-fixed-bg--3"style="padding-top:17vh;">
+	   </div> 
+
+	   <div class="cd-scrolling-bg cd-scrolling-bg--color-3">
+	   	  <h2 class="subtitle" style="text-align:right; padding-right:5vh;"> Multichannel Gas Sensor</h2>
+	      <div class="row">
+		      <div class="col-5" style="padding-left:5vh;">
+					<img src="../static/media/nosilkair.PNG" class="image">
+					<div class = "under_figure"> Concentration of NO<sub>2</sub> [ppm] as captured by Grove Multichannel Gas Sensor from May 13th till May 15th 2018 at Lochristi, Belgium </div>
+		      </div>
+
+		      <div class="col-6" style="text-align:left; margin-left:4vh; padding-top:1vh;">
+			         <p>
+			            Next we have the the <strong>Multichannel Gas Sensor</strong>, which measures NO<sub>2</sub>, CO, NH<sub>3</sub>, CH<sub>4</sub>, H<sub>2</sub>, C<sub>3</sub>H<sub>8</sub>, C<sub>4</sub>H<sub>10</sub>, C<sub>2</sub>H<sub>5</sub>OH. As stated above, <strong>NO<sub>2</sub></strong> is one of the most important air pollutants. Unfortunately the Multichannel Gas sensor can only measure NO<sub>2</sub> concentrations within a range of 0.05 to 10ppm. As the average nitrogen dioxide concentrations in Flanders range between 10 and 20 ppm, the Grove sensor can once again only be used to detect certain trends in the concentration of nitrogen dioxide. 
+		         	 </p>
+		      </div>
+		   </div> 
+		   <div class="col-12" style="text-align:left; padding-left:5vh; padding-top:5vh;">
+		         	 <p>
+		         	 	While <strong>CO</strong> isn't considered in the calculation of the AQI, it still plays a key role in polluted air. High concentrations of CO cause reduced oxygen transport by hemoglobin and lead to headaches, chest pain or even death. The Grove Multichannel Gas Sensor measures CO concentrations ranging between 1 and 1000 ppm. Sadly, the average concentration in Flanders ends up being even lower than 1ppm, namely 0.3 ppm. Perhaps we could state once more that this sensor should only be used to discover trends, but the two graphs underneath show the large difference between the captured data of two different Multichannel gas sensors in very similar environments. Hence, this sensor should not be used to indicate the concentration of CO. 
+		         	 </p>
+	         </div>
+
+	      <div class="row"> 
+	      		<div class="col-6" style="padding-top: 1vh; padding-left:5vh;">
+					<img src="../static/media/coRaar.PNG" class="image">
+		      	</div>
+				<div class="col-6" style="padding-top: 1vh; padding-right:5vh;">
+					<img src="../static/media/cosilkair.PNG" class="image">
+		      	</div>
+		      	
+	         	
+	         </div>
+
+	         <div class="under_figure">
+	         	Concentration of CO [ppm] as measured by two different Multichannel Gas sensors
+	         </div>
+	   </div> 
+
+	   <div class="cd-fixed-bg cd-fixed-bg--4"style="padding-top:17vh;">
+	   </div> 
+
+	   <div class="cd-scrolling-bg cd-scrolling-bg--color-4">
+	       <h2 class="subtitle" style="text-align:left; padding-left:5vh;"> Barometer Sensor</h2>
+			<div class="row" style="padding-left:5vh;">
+				<div class="col-7" ">
+			        <p>
+		             On to the penultimate sensor, the <strong>Grove Barometer Sensor (BMP280)</strong> measuring both temperature and humidity. Using the weather forecast information found on <a href="https://www.accuweather.com/nl/be/lochristi/30343/may-weather/30343" style="color: #212529; text-decoration: none;">AccuWeather</a>, we analyzed the temperature data from 13th till 5th May at Lochristi. The data matched rather well so the Grove barometer Sensor is considered a reliable tool to measure temperature. 
+		         	 </br>
+		         	 </br>		         	 
+					 Last but not least, there's the <strong>Grove GPS sensor</strong>, needed to provide the current time and location of the microstation. After carrying out a certain number of empirical tests, we conclude the GPS sensor works flawlessly, once passed its warm-up time.</p>
+				 	</p>
+		      </div> 
+		      <div class="col-5" style="padding-top: 1vh; padding-right:5vh;">
+					<img src="../static/media/weerLochristi.PNG" class="image">
+					<div class = "under_figure"> Temperature [°C] as measured by Grove Barometer Sensor from May 13th till April 15th 2018 at Lochristi, Belgium</div>
+		      </div>
+		  </div>
+	   </div> 
+	   <div class="cd-fixed-bg cd-fixed-bg--5"style="padding-top:17vh;">
+	   </div> 
+	 <div class="cd-scrolling-bg cd-scrolling-bg--color-5">
+	      <h2 class="subtitle"> In summary...</h2>
+		  <div class="col-7" style="margin:auto;">
+		        <p>
+	             We could say most of the current Grove sensors are inadequate for a detailed air quality analysis, although sufficient to discover certain trends.  We do encourage our participants however to try different types of sensors to measure all kinds of air pollutants. This way you can help grow our knowledge and truly engage in a fascinating project.
+			 	</p>
+	      </div> 
+	 </div>
+
+{% endblock %}

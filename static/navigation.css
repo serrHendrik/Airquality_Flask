@@ -1,0 +1,56 @@
+body {
+	margin: 0;
+}
+
+.project_name {
+	color: white;
+	font-size: 32pt;
+	font-family: 'Dancing Script', cursive;
+	letter-spacing: 0.1em;
+	margin: 0px;
+	margin-right: 80px;
+	margin-left: 32px;
+	pointer-events: none;
+}
+
+.ul_navigation {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	height: 100%;
+}
+
+.ul_navigation li {
+	float: left;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.ul_navigation a {
+	display: block;
+	padding: 8px;
+
+	text-decoration: none;
+	text-transform: uppercase;
+	color: white;
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	font-size: 10pt;
+	letter-spacing: 0.2em;
+
+	cursor: pointer;
+}
+
+.ul_navigation a:hover {
+	font-weight: bold;
+}
+
+/* content container */
+
+.content_container {
+	margin-top: 89px;
+}

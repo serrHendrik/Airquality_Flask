@@ -1,0 +1,52 @@
+{% extends "navigation.html" %}
+
+
+
+{% block head %}
+
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='contact.css') }}">
+
+{% endblock %}
+
+
+{% block content %}
+
+	<div class="section_1">
+		<p class="catch_phrase noselect">Contact</p>
+	</div>
+
+	<div class="container-fluid bg_pink">
+		
+		<div class ="row third_title">
+			<div class="col">
+				<h2>We would love to hear from you.</h2>
+			</div>
+		</div>
+
+		<div class="row justify-content-center info_section">
+			<div class="col-4" >
+				</br>
+				<img src="../static/media/envelope_lila.png" class="image">
+				</br>
+				<p>Hendrik.Serruys@UGent.be</p>
+				<p>Thibo.Vanquaethem@Ugent.be</p>
+				<p>Jarne.Verhaeghe@UGent.be</p>
+				<p>Silke.DeClercq@Ugent.be</p>
+			</div>
+			<div class="col-4" >
+				</br>
+				<img src="../static/media/marker_lila.png" style="width: 10%;" class="image">
+				</br>
+				<p>Faculty of Engineering and Architecture</p>
+				<p>Jozef Plateaustraat 22</p>
+				<p>9000 Gent</p>
+				<p>Belgium </p>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}

@@ -1,0 +1,26 @@
+SELECT to_json(t)
+FROM (
+    SELECT 	markerlong, 
+            markerlat, 
+            COUNT(temperature) AS dataPointCount, 
+            json_agg(json_build_object('c', json_build_array(
+                                        json_build_object('v', 'Date(' || EXTRACT(YEAR FROM timestamp_halfhour) || ',' || (EXTRACT(MONTH FROM timestamp_halfhour) - 1) || ',' || EXTRACT(DAY FROM timestamp_halfhour) || ',' || EXTRACT(HOUR FROM timestamp_halfhour) || ',' || EXTRACT(MINUTE FROM timestamp_halfhour) || ',' || EXTRACT(SECOND FROM timestamp_halfhour) || ', 0)'), 
+                                        json_build_object('v', pressure), 
+                                        json_build_object('v', temperature),
+                                        json_build_object('v', humidity),
+                                        json_build_object('v', "CO"),
+                                        json_build_object('v', "NH3"),
+                                        json_build_object('v', "NO2"),
+                                        json_build_object('v', "CH4"),
+                                        json_build_object('v', "H2"),
+                                        json_build_object('v', "C3H8"),
+                                        json_build_object('v', "C4H10"),
+                                        json_build_object('v', "C2H5OH"),
+                                        json_build_object('v', "Dust")
+                                            ) 
+                                        ) 
+             ) AS dataPoints 
+    FROM view_markers_per_halfhour_without_microstation_id
+    GROUP BY markerlong, markerlat 
+    HAVING COUNT(temperature) > 20
+    ) t

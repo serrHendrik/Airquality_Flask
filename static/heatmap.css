@@ -1,0 +1,108 @@
+#map_control {
+	position: absolute;
+	left: 0px;
+	top: 80px;
+	font-family: 'Raleway';
+	font-size: 1.3rem;
+}
+
+.btn {
+	font-size: 1.3rem;
+}
+
+#map {
+	width:100%;
+    height: calc(100vh - 89px);;
+    position: absolute;
+    top: 89px;
+}
+
+#infowindow_div {
+	height: 300px;
+	width: 500px;
+}
+
+#title_p {
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	font-size: 16pt;
+	/*text-decoration: underline;*/
+
+	margin-top: 8px;
+}
+
+#chart_div {
+	display: block;
+	margin: 0 auto;
+}
+
+#filter_div {
+	display: block;
+	margin: 12px auto 0 auto;
+}
+
+#gradient {
+	border-style: solid;
+}
+
+.card-body {
+	font-family: 'Raleway';
+	font-size: 1.15rem;
+}
+
+#gradientTitle {
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+
+.colourInterval {
+	border-bottom-style: dashed;
+	border-width: 1px;
+	padding-top: 8%;
+	padding-bottom: 8%;
+}
+
+.temperature {
+	background: linear-gradient(to top, #3597FD, #36FDD8, #38FD4F, #ABFE39, #FEC83B, #FF423D);
+}
+
+.humidity {
+	background: linear-gradient(to top, #FFAA05, #DAFC04, #62F903, #02F619, #02F38B, #01E5F0, #0071ED, #0000EB);
+}
+
+.CO {
+	background: linear-gradient(to top, #D1D1D1, #B9B9B9, #A2A2A2, #8B8B8B, #747474, #5C5C5C, #454545, #2E2E2E, #171717, #000000);
+}
+
+.NH3 {
+	background: linear-gradient(to top, #F7CADF, #F495C9, #F062B8, #EE30AD, #EB00A7);
+}
+
+.NO2 {
+	background: linear-gradient(to top, #F7DECA, #F5D2B3, #F4C79D, #F3BC86, #F1B170, #F0A559, #EF9A43, #ED8F2C, #EC8416, #EB7900);
+}
+
+.CH4 {
+	background: linear-gradient(to top, #A0EEA5, #78DF87, #50D069, #28C14B, #00B32D);
+}
+
+.H2 {
+	background: linear-gradient(to top, #A0BBEE, #8EA8DD, #7D96CC, #6B83BB, #5A71AA);
+}
+
+.C3H8 {
+	background: linear-gradient(to top, #CDECC1, #AACE9C, #87B177, #649352, #41762D);
+}
+
+.C4H10 {
+	background: linear-gradient(to top, #ECC1CD, #CE9CB2, #B17798, #93527E, #767D64);
+}
+
+.C2H5OH {
+	background: linear-gradient(to top, #ECE7C1, #CEC99C, #B1AB77, #938D52, #766F2D);
+}
+
+.Dust {
+	background: linear-gradient(to top, #C1ECDD, #9CCEBE, #77B19F, #529380, #2D7661);
+}

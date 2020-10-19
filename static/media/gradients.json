@@ -1,0 +1,68 @@
+gradients = {
+  "temperature": {
+    "minValue": -5,
+    "maxValue": 35,
+    "unit": "°C",
+    "colours": ["#3597FD", "#36FDD8", "#38FD4F", "#ABFE39", "#FEC83B", "#FF423D"]
+  },
+  "humidity": {
+    "minValue": 5,
+    "maxValue": 95,
+    "unit": "%",
+    "colours": ["#FFAA05", "#DAFC04", "#62F903", "#02F619", "#02F38B", "#01E5F0", "#0071ED", "#0000EB"]
+  },
+  "CO": {
+    "minValue": 10,
+    "maxValue": 90,
+    "unit": "ppm",
+    "colours": ["#D1D1D1", "#B9B9B9", "#A2A2A2", "#8B8B8B", "#747474", "#5C5C5C", "#454545", "#2E2E2E", "#171717", "#000000"]
+  },
+  "NH3": {
+    "minValue": 10,
+    "maxValue": 40,
+    "unit": "ppm",
+    "colours": ["#F7CADF", "#F495C9", "#F062B8", "#EE30AD", "#EB00A7"]
+  },
+  "NO2": {
+    "minValue": 1,
+    "maxValue": 9,
+    "unit": "ppm",
+    "colours": ["#F7DECA", "#F5D2B3", "#F4C79D", "#F3BC86", "#F1B170", "#F0A559", "#EF9A43", "#ED8F2C", "#EC8416", "#EB7900"]
+  },
+  "CH4": {
+    "minValue": 1,
+    "maxValue": 7,
+    "unit": "ppm",
+    "colours": ["#A0EEA5", "#78DF87", "#50D069", "#28C14B", "#00B32D"]
+  },
+  "H2": {
+    "minValue": 5,
+    "maxValue": 20,
+    "unit": "ppm",
+    "colours": ["#A0BBEE", "#8EA8DD", "#7D96CC", "#6B83BB", "#5A71AA"]
+  },
+  "C3H8": {
+    "minValue": 2000,
+    "maxValue": 8000,
+    "unit": "ppm",
+    "colours": ["#CDECC1", "#AACE9C", "#87B177", "#649352", "#41762D"]
+  },
+  "C4H10": {
+    "minValue": 2000,
+    "maxValue": 8000,
+    "unit": "ppm",
+    "colours": ["#ECC1CD", "#CE9CB2", "#B17798", "#93527E", "#767D64"]
+  },
+  "C2H5OH": {
+    "minValue": 10,
+    "maxValue": 40,
+    "unit": "ppm",
+    "colours": ["#ECE7C1", "#CEC99C", "#B1AB77", "#938D52", "#766F2D"]
+  },
+  "Dust": {
+    "minValue": 2000,
+    "maxValue": 8000,
+    "unit": "pcs/liter",
+    "colours": ["#C1ECDD", "#9CCEBE", "#77B19F", "#529380", "#2D7661"]
+  }
+}

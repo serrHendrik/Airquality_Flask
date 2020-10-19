@@ -1,0 +1,203 @@
+{% extends "navigation.html" %}
+
+{% block head %}
+
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='participate.css') }}">
+
+{% endblock %}
+
+{% block content %}
+
+	<div class="section_1">
+		<p class="catch_phrase noselect"><br /><br /><br /><br />Join the community!<br />Follow the steps below <br />and become part of the family.<br /><br />Register now!</p>
+	</div>
+
+	<div class="container-fluid bg_bruin">
+		<div class="row second_title">
+			<div class="col">
+				<h1>Hardware set-up</h1>
+			</div>
+		</div>
+
+		<div class ="row third_title">
+			<div class="col">
+				<h2>What you're going to need</h2>
+			</div>
+		</div>
+
+		<div class="row justify-content-center hardware_section">
+
+					<div class="row">
+   					<div class="col-3 container">
+					  	<a href="http://wiki.seeedstudio.com/Base_Shield_V2/" target="_blank">
+					  		<img src="../static/media/base_shield.png" alt="Base Shield" class="image">
+					 		 <div class="overlay">
+					   		 	<div class="overlay_text">2 x Base Shield v2</div>
+					 		 </div>
+					 	</a>
+					</div>
+					<div class="col-3 container">
+					  	<a href="http://wiki.seeedstudio.com/Seeeduino_v4.2/" target="_blank">
+						  <img src="../static/media/seeduino.png" alt="Seeeduino" class="image">
+						  <div class="overlay">
+						    <div class="overlay_text">Seeeduino V4.2 (Slave)</div>
+						  </div>
+						</a>
+					</div>
+					<div class="col-3 container">
+						<a href="http://wiki.seeedstudio.com/Seeeduino_GPRS/" target="_blank">
+						  <img src="../static/media/seeeduino_gprs.png" alt="Seeeduino GPRS" class="image">
+						  <div class="overlay">
+						    <div class="overlay_text">Seeeduino GPRS (Master) + SIM card </div>
+						  </div>
+						</a>
+					</div>	
+					<div class="col-3 container">
+						<a href="https://www.seeedstudio.com/Grove-Universal-4-Pin-20cm-Unbuckled-Cable-%285-PCs-Pack%29-p-749.html" target="_blank">
+						  <img src="../static/media/grove_cable.png" alt="Grove Cable" class="image">
+						  <div class="overlay">
+						    <div class="overlay_text"> 5 x Grove Universal 4 Pin Cable</div>
+						  </div>
+						</a>
+					</div>	
+				</div>
+
+				<div class="row">
+					<div class="col-3 container">
+						<a href="http://wiki.seeedstudio.com/Grove-GPS/" target="_blank">
+						  <img src="../static/media/grove_gps.png" alt="Grove GPS" class="image">
+						  <div class="overlay">
+						    <div class="overlay_text">Grove GPS</div>
+						  </div>
+						</a>
+					</div>
+					<div class="col-3 container">
+						<a href="http://wiki.seeedstudio.com/Grove-Barometer_Sensor-BME280/" target="_blank">
+						  <img src="../static/media/grove_baro.png" alt="Grove Baro" class="image">
+						  <div class="overlay">
+						    <div class="overlay_text">Grove Barometer Sensor (BMP280)</div>
+						  </div>
+						</a>
+					</div>
+					<div class="col-3 container">
+						<!--<a href="http://wiki.seeedstudio.com/Grove-Dust_Sensor/" target="blank">-->
+					  	<a href="https://youtu.be/H07zYvkNYL8?t=3" target="_blank">
+					  		<img src="../static/media/grove_dust.png" alt="Grove Dust" class="image">
+					 	 	<div class="overlay">
+					   	 		<div class="overlay_text">Grove Dust Sensor </div>
+					 	 	</div>
+					  	</a>
+					</div>	
+					<div class="col-3 container">
+						<a href="http://wiki.seeedstudio.com/Grove-Multichannel_Gas_Sensor/" target="blank">
+						  <img src="../static/media/grove_gas.png" alt="Grove Gas" class="image">
+						  <div class="overlay">
+						    <div class="overlay_text">Grove Multichannel Gas Sensor</div>
+						  </div>
+						</a>
+					</div>	
+				</div>
+		</div>
+		<hr>
+		<div class ="row third_title">
+			<div class="col">
+				<h2 style="margin-bottom:30px;">How to set up the microstation</h2>
+			</div>
+		</div>	
+
+		<div class="row justify-content-center ">
+			<div class="col-11 smaller_center_text" style="margin-top:7px;padding-bottom: 7px;">
+				<p> Put a Base shield on top of both the GPRS and the seeeduino 4.2. <br /> Using the Grove 4 Pin cables, you can connect the sensors with the Base shields following the scheme below.</p>
+			</div>
+		</div>
+
+		<div class="row justify-content-center configuration_section">
+			<div class="col-4">
+				<div class = "center_text "> Master (GPRS)</div>
+				<img src="../static/media/base_master.png" alt="Base Master" class="image">
+			</div>
+
+			<div class="col-4">
+				<div class = "center_text ">Slave Seeeduino V4.2</div>
+				<img src="../static/media/base_slave.png" alt="Base Slave" class="image">
+			</div>
+			<div class="col-4" style="padding-top:75px;">
+				<p> A. Grove Barometer Sensor (BMP280)</p>
+				<p> B. Grove Multichannel Gas Sensor</p>
+				<p> C. Grove Universal 4 Pin Cable </p>
+				<p> D. Grove GPS </p>
+				<p> E. Grove Dust Sensor </p>
+			</div>
+		</div>	
+	</div>
+
+	<!--<div class="bg_transparent">
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+	</div>-->
+
+	<div id="codesection" class="container-fluid bg_bruin">
+		<div class="row second_title">
+			<div class="col">
+				<h1>Software setup</h1>
+			</div>
+		</div>
+
+		<div class ="row third_title">
+			<div class="col">
+				<h2>Code</h2>
+			</div>
+		</div>
+		<div id="codesection">
+		<div class="row justify-content-center " style="margin-bottom:50px;">
+			<div class="col-11 smaller_center_text">
+					<p>1. Download <strong>source code</strong>.<a href="../static/media/Hardware.zip" style="text-decoration:none;" download>
+						<img border="0" src="../static/media/download_parcticipate.png" alt="Download" width="35" height="35">
+					</a></p>
+					<p>2. <strong>Unzip</strong> the downloaded file </p>
+					<img src="../static/media/unzip.png" alt="unzip" class="image_tutorial">
+					<p>3. Upload the included <strong>GPRS library</strong> (Seeeduino_GPRS-master.zip) onto the Arduino IDE </p>
+					<img src="../static/media/upload_library.png" alt="Code Setup" class="image_tutorial">
+					<p>4. Change the code in collect_send.ino as seen below, to your <strong>PIN</strong>, <strong>PUK</strong> and your internet <strong>APN network</strong></p>
+					<img src="../static/media/code_setup.png" alt="Code Setup" class="image_tutorial">
+					<p>5. Set the Board type to <strong>'Arduino Leonardo'</strong> and <strong>upload</strong> the <strong>collect_send.ino</strong> onto the master seeeduino GPRS</p>
+					<img src="../static/media/collect_send.png" alt="Collect Send" class="image_tutorial">
+					<p>6. Set the Board type to <strong>'Arduino Uno'</strong> and upload the <strong>slave.ino</strong> onto the slave seeeduino </p>
+					<img src="../static/media/slave.png" alt="Slave" class="image_tutorial">
+					<p>7. Connect the master (with the SIM card inserted) to a <strong>power supply</strong> to start sending data </p>
+					<p style="margin-bottom:50px;">8. <strong>Register</strong> your new setup and <strong>read</strong> the instructions below to figure out the <strong>IMEI Number</strong></p>
+					<a href="{{ url_for('register') }}" class="button">REGISTER >></a>
+				</div>				
+		</div>
+		<hr>
+		<div class ="row third_title">
+			<div class="col">
+				<h2 style="margin-bottom:3%;">Get your IMEI Number</h2>
+			</div>
+		</div>
+
+		<div class="row justify-content-center">
+			<div class="col-11"> 
+				<div class ="smaller_center_text">
+					<p>1. <strong>Connect</strong> your seeeduino GPRS to your Arduino IDE with (!) SIM card inserted</p>
+					<p>2. <strong>Open</strong> the Arduino IDE with the GPRS library already installed (as explained above)</p>
+					<p>3. Go to <strong>file>Examples>Seeeduino_GPRS-master</strong> and click on <strong>Serial Debug</strong></p>
+					<img src="../static/media/serial_Debug.png" alt="serial monitor" class="image_tutorial" >
+					<p>4. <strong>Upload</strong> to the seeeduino and open the <strong>Serial Monitor</strong> </p>
+					<img src="../static/media/serial_monitor.jpg" alt="serial monitor" class="image_tutorial">
+					<p>5. When the serial monitor is ready, send the following command: <strong>AT+CPIN?</strong> </p>
+					<p>6. If the response is: <strong>+CPIN:READY</strong> go to step 8. Otherwise, go to step 7</p>
+					<p>7. Check if you have to fill in the SIM's PIN (command: <strong>AT+CPIN="insertPIN"</strong> note: between " " !) or PUK (command: <strong>AT+CPIN="insertPUK","insertPIN"</strong>) and wait for <strong>+CPIN:READY</strong> </p>
+					<p>8. At last, send the command to retrieve the IMEI number: <strong>AT+GSN</strong></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}
